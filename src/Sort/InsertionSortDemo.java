@@ -6,6 +6,8 @@ package Sort;
  * 基本思想：在要排序的一组数中，假设前面(n-1) [n>=2] 个数已经是排
  *	好顺序的，现在要把第n个数插到前面的有序数中，使得这n个数
  *		也是排好顺序的。如此反复循环，直到全部排好顺序。
+ *	特点：1.基本有序的序列，直接插入排序最快
+ *			2.记录个数很少的无序序列，直接出入也很快
  */
 public class InsertionSortDemo {
 	public static void main(String[] args) {
@@ -50,14 +52,8 @@ public class InsertionSortDemo {
 		for(i = 1; i< n; i++){
 			tmp = data[i];
 			//寻找插入位置
-			for(j = i-1; j >= 0; j--){
-				if(data[j] > tmp)
-				{
-					data[j+1] = data[j]; 
-					
-				}else{
-					break;
-				}
+			for(j = i-1; j >= 0 && tmp < data[j]; j--){
+				data[j+1] = data[j]; 	
 			}
 			data[j+1] = tmp;
 		}

@@ -10,7 +10,7 @@ public class QuickSortDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		int[] data = {40,2,1,43,3,65,0,3,-1,58,42,4};
+		int[] data = {49,38,65,97,76,13,27,0,49,78,34,12,64,5,4,62,99,98,54,56,17,18,23,34,15,35,25,53,51};
 		quickSort(data,0,data.length-1);
 		for(int i = 0; i < data.length; i++){
 			System.out.println(data[i]);
