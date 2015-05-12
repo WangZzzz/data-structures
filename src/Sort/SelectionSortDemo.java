@@ -1,6 +1,11 @@
 package Sort;
 
 public class SelectionSortDemo {
+	/*
+	 * 在要排序的一组数中，选出最大的一个数与最后一个位置的数交换；
+			然后在剩下的数当中再找最大的与倒数第二个位置的数交换，
+			如此循环到第二个数和第一个数比较为止。
+	 */
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

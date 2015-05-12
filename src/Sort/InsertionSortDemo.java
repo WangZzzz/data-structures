@@ -2,12 +2,16 @@ package Sort;
 
 /*
  * 直接插入排序：将左边的视为已经排好序的，将右边的依次插入
+ * 
+ * 基本思想：在要排序的一组数中，假设前面(n-1) [n>=2] 个数已经是排
+ *	好顺序的，现在要把第n个数插到前面的有序数中，使得这n个数
+ *		也是排好顺序的。如此反复循环，直到全部排好顺序。
  */
 public class InsertionSortDemo {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] data = {40,2,1,43,3,65,0,-1,58,3,42,4};
-		insertionSort(data);
+		insertionSort2(data);
 		for(int i = 0; i < data.length; i++){
 			System.out.println(data[i]);
 		}
@@ -31,6 +35,31 @@ public class InsertionSortDemo {
 				data[k+1] = data[k];
 			}
 			data[j] = tmp;
+		}
+	}
+	
+	/*
+	 * 此种插入排序，把寻找插入位置和后移元素一起进行了。
+	 */
+	public static void insertionSort2(int[] data){
+		if(data == null || data.length < 0){
+			return;
+		}
+		int n = data.length;
+		int i,j,k,tmp;;
+		for(i = 1; i< n; i++){
+			tmp = data[i];
+			//寻找插入位置
+			for(j = i-1; j >= 0; j--){
+				if(data[j] > tmp)
+				{
+					data[j+1] = data[j]; 
+					
+				}else{
+					break;
+				}
+			}
+			data[j+1] = tmp;
 		}
 	}
 }
