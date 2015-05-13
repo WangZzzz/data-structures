@@ -51,7 +51,7 @@ public class InsertionSortDemo {
 		int i,j,k,tmp;;
 		for(i = 1; i< n; i++){
 			tmp = data[i];
-			//Ñ°ÕÒ²åÈëÎ»ÖÃ
+			//Ñ°ÕÒ²åÈëÎ»ÖÃ 
 			for(j = i-1; j >= 0 && tmp < data[j]; j--){
 				data[j+1] = data[j]; 	
 			}

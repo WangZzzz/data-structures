@@ -18,6 +18,9 @@ public class LinkListTest {
 		System.out.println("******");
 		ll.displayAllNodes3(ll.head);
 		System.out.println("******");
+		ll.clear();
+		System.out.println("******");
+		ll.displayAllNodes1();
 		
 		
 /*		//删除指定索引位置的节点

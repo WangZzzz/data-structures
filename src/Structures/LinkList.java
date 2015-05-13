@@ -31,6 +31,10 @@ public class LinkList<T>
 		head = null;
 	}
 	
+	public void clear(){//删除所有结点
+		head.next = null;
+		head = null;
+	}
 	//在头结点前面插入节点
 	public void addFirstNode(T t)
 	{
