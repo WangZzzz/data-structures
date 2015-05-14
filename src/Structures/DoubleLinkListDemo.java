@@ -1,9 +1,5 @@
 package Structures;
 
-import javax.crypto.Cipher;
-import javax.print.attribute.standard.RequestingUserName;
-import javax.xml.soap.Node;
-
 /*
  * 双向链表，不是循环的
  */
@@ -206,7 +202,7 @@ class DoubleLinkList<T>{
 	}
 	
 	public T getData(int index){//根据指定索引获取数据
-		if(index < 0 || index >= size - 1){
+		if(index < 0 || index >= size){
 			return null;
 		}
 		if(index == 0){//第一个结点

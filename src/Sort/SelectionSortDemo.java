@@ -21,15 +21,16 @@ public class SelectionSortDemo {
 			return;
 		}
 		int n = data.length;
-		int index = 0;
-		for(int i = 0; i < n; i++){
-			index = 0;
-			for(int j = 1; j < n - i; j++){
-				if(data[j] > data[index]){
-					index = j;
+		int max = 0;
+		int i,j;
+		for(i = 0; i < n; i++){
+			max = 0;
+			for(j = 1; j < n - i; j++){
+				if(data[j] > data[max]){
+					max = j;
 				}
 			}
-			swap(data,n-i-1,index);
+			swap(data,n-1-i,max);//交换每趟的最后一个元素和max
 		}
 	}
 	
