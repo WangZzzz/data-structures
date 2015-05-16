@@ -1,5 +1,8 @@
 package Sort;
 
+import java.util.Random;
+
+
 public class QuickSortDemo {
 	/*
 	 * 基本思想：选择一个基准元素,通常选择第一个元素或者最后一个元素,通过一趟扫描，
@@ -18,14 +21,22 @@ public class QuickSortDemo {
 	}
 	
 	public static void quickSort(int[] data,int l,int r){
-		if(l < r){
-			int middle = partion(data, l, r);//得到一次的中间位置
-			quickSort(data, l, middle-1);//中间位置左侧
-			quickSort(data, middle+1, r);//中间位置右侧
-		}		
+		if(l >= r){
+			return;
+		}
+		int middle = partion(data, l, r);//得到一次的中间位置
+		quickSort(data, l, middle-1);//中间位置左侧
+		quickSort(data, middle+1, r);//中间位置右侧	
 	}
 	
 	public static int partion(int[]data, int l ,int r){
+		if(data == null || data.length <= 0 || l < 0 || r >= data.length){
+			throw new RuntimeException("输入错误！");
+		}		
+		Random random = new Random();
+		int ranNum = random.nextInt(r - l) + l;//有一个问题，永远取不到右边界
+		swap(data,l,ranNum);
+
 		int tmp = data[l];
 		while(l < r){
 			while((l < r) && (data[r] >= tmp))
@@ -39,5 +50,10 @@ public class QuickSortDemo {
 		data[l] = tmp;
 		return l;//将中间的位置返回
 	}
-
+	
+	private static void swap(int[] data,int i, int j){
+		int tmp = data[i];
+		data[i] = data[j];
+		data[j] = tmp;
+	}
 }
