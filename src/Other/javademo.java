@@ -90,12 +90,12 @@ public class javademo {
         try {
              
             //需要加密的数据  
-            String data = "http://open.weather.com.cn/data/?areaid=101010100&type=index_f&date=201505140920&appid=4fc60c532eeba01b";  
+            String data = "http://open.weather.com.cn/data/?areaid=101010200&type=index_v&date=201505172020&appid=4fc60c532eeba01b";  
             //密钥  
             String key = "e4cde1_SmartWeatherAPI_0422eda";  
              
             String str = standardURLEncoder(data, key);
-            //http://open.weather.com.cn/data/?areaid=101010100&type=index_f&date=201505140920&appid=4fc60c532eeba01b&key=FCSWVyjvvW0TldDBP3AOT%2BxCBJI%3D
+            //http://open.weather.com.cn/data/?areaid=101010200&type=index_v&date=201505140920&appid=4fc60c532eeba01b&key=0U1Tt8SFrUYQ%2BiF08DIjz0aung4%3D
             System.out.println(str);
              
         } catch (Exception e) {

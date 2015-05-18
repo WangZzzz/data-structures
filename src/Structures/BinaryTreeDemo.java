@@ -125,4 +125,8 @@ class BinaryTree{
 		
 		return Math.max(depthLeft, depthRight) + 1;
 	}
+	
+	/*
+	 * 非递归实现前序遍历
+	 */
 }
