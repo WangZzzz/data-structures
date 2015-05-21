@@ -1,6 +1,5 @@
 package Offer;
 
-import javax.print.attribute.standard.NumberUpSupported;
 
 /*
  * 面试题8：旋转数组的最小数字
@@ -29,7 +28,7 @@ public class MinNumDemo {
 			if(data[l] == data[mid] && data[mid] == data[r]){
 				//当3个位置数字相等时，此部分只能顺序查找{0,1,1,1,1}的两个旋转数组
 				//{1,0,1,1,1},{1,1,1,0,1},
-				return MinInOrder(data, l, r);
+				return MinInOrder(data, l,  r);
 			}
 			if(data[mid] >= data[l]){
 				l = mid;

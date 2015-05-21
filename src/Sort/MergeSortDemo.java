@@ -71,9 +71,13 @@ public class MergeSortDemo {
 			data[m + low] = tmp[m];
 		}
 	}
+	/*
+	 * 通过先递归的分解数列，再合并数列就完成了归并排序。
+	 */
 	public static void mergeSort(int[] data, int low, int high){
-		int mid = (low + high) / 2;
+		
 		if(low < high){
+			int mid = (low + high) / 2;
 			//左边
 			mergeSort(data, low, mid);
 			//右边
