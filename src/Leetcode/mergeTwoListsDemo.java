@@ -96,7 +96,7 @@ public class mergeTwoListsDemo {
 			}
 		}
 	}
-	}
+}
 
 class ListNode{
 	int val;
