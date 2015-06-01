@@ -56,7 +56,7 @@ public class MergeSortDemo {
 			}
 		}
 		
-		//将左边剩余的数移到临时数组
+		//将左边剩余的数移到临时数组，左边和右边不可能同时都有剩余的数组，只可能有一边有
 		while(i <= mid){
 			tmp[k++] = data[i++];
 		}
@@ -73,6 +73,7 @@ public class MergeSortDemo {
 	}
 	/*
 	 * 通过先递归的分解数列，再合并数列就完成了归并排序。
+	 * ，直到分解的只有一个数时，我们就认为它是有序的了
 	 */
 	public static void mergeSort(int[] data, int low, int high){
 		

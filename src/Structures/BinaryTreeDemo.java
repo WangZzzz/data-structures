@@ -47,7 +47,7 @@ class BinaryTree{
 			root.pRight = null;
 		}else{
 			Node current = root;
-			Node parent;
+			Node parent = null;
 			while(true){
 				if(data < current.data){//左子树均小于它的根结点的值
 					parent = current;
