@@ -16,17 +16,17 @@ public class RebuildBinaryTreeDemo {
 		int[] inOrder = {4,7,2,1,5,3,8,6};*/
 		int[] preOrder = {1,2,3,4};
 		int[] inOrder = {4,3,2,1};
-		BinaryTree.Node root = BinaryTree.rebuildBinaryTree(preOrder, inOrder, preOrder.length);
-		BinaryTree.preOrder(root);
+		MyBinaryTree.Node root = MyBinaryTree.rebuildBinaryTree(preOrder, inOrder, preOrder.length);
+		MyBinaryTree.preOrder(root);
 		System.out.println("*******");
-		BinaryTree.inOrder(root);
+		MyBinaryTree.inOrder(root);
 		System.out.println("*******");
-		BinaryTree.aftOrder(root);
+		MyBinaryTree.aftOrder(root);
 	}
 
 }
 
-class BinaryTree{
+class MyBinaryTree{
 	static class Node{
 		int data;
 		Node left;
@@ -41,7 +41,7 @@ class BinaryTree{
 	}
 	
 	public Node root;//¸ù½Úµã
-	public BinaryTree() {
+	public MyBinaryTree() {
 		// TODO Auto-generated constructor stub
 		root = null;
 	}
