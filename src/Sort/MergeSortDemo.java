@@ -34,7 +34,7 @@ public class MergeSortDemo {
 		int j = mid + 1;//右指针，负责mid+1~high这边的数组
 		int k = 0;//负责新数组
 
-		System.out.println("left side : ");
+/*		System.out.println("left side : ");
 		for(int m = low; m <= mid; m++){
 			System.out.print(data[m] + " ");
 		}
@@ -45,12 +45,10 @@ public class MergeSortDemo {
 		}
 		System.out.println();
 		//先将两个序列中较小的数移到临时数组
-		while(i <= mid && j <= high){
+*/		while(i <= mid && j <= high){
 			if(data[i] < data[j])
 			{
-				tmp[k] = data[i];
-				i++;
-				k++;
+				tmp[k++] = data[i++];
 			}else{
 				tmp[k++] = data[j++];
 			}
