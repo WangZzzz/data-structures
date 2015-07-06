@@ -12,14 +12,14 @@ import Offer.MyBinaryTree.Node;
  * @author WangZ
  *	面试题23：从上往下打印二叉树 第137页
  *	题目：从上往下打印出二叉树的每个结点，同一层的结点按照从左到右的顺序打印
- *	思路：每一层使用队列
+ *	思路：每一层使用队列，先出队，左结点入队，右结点入队
  */
 public class PrintFromTopToBottomDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		BinaryTree bt = new BinaryTree();
-		bt.insertBST(8);
+/*		bt.insertBST(8);
 		bt.insertBST(6);
 		bt.insertBST(10);
 		bt.insertBST(5);
@@ -29,6 +29,18 @@ public class PrintFromTopToBottomDemo {
 		preOrder(bt.root);
 		System.out.println("*************");
 		PrintFromTopToBottom(bt.root);
+		System.out.println("*************");*/
+		bt.insertBT(8);
+		bt.insertBT(6);
+		bt.insertBT(10);
+		bt.insertBT(5);
+		bt.insertBT(7);
+		bt.insertBST(9);
+		preOrder(bt.root);
+		System.out.println("*************");
+		PrintFromTopToBottom(bt.root);
+		System.out.println("*************");
+
 	}
 
 	private static void PrintFromTopToBottom(BinaryTreeNode root){
@@ -36,8 +48,8 @@ public class PrintFromTopToBottomDemo {
 			return;
 		}
 		/*
-		 * LinkedList :队列：offerFirst --- pollLast
-		 *  栈：offerFirst --- pollFirst
+		 * LinkedList :队列：offerFirst --- pollLast 先进先出
+		 *  栈：offerFirst --- pollFirst 后进先出
 		 */
 		//模拟队列
 		LinkedList<BinaryTreeNode> ll = new LinkedList<BinaryTreeNode>();

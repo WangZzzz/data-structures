@@ -8,6 +8,7 @@ package Sort;
  *		也是排好顺序的。如此反复循环，直到全部排好顺序。
  *	特点：1.基本有序的序列，直接插入排序最快
  *			2.记录个数很少的无序序列，直接出入也很快
+ *		O(n^2)
  */
 public class InsertionSortDemo {
 	public static void main(String[] args) {

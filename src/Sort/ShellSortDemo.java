@@ -9,6 +9,7 @@ package Sort;
  * 上会很高
  * 
  * 时间复杂度：O(n^2)到O(nlog2(n))之间,控件复杂度O(1)
+ * 	O(n^1.5)
  */
 public class ShellSortDemo {
 	public static void main(String[] args) {

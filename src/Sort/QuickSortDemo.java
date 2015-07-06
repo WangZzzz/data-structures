@@ -1,5 +1,6 @@
 package Sort;
 
+import java.util.Arrays;
 import java.util.Random;
 
 
@@ -9,15 +10,16 @@ public class QuickSortDemo {
 	 * 将待排序列分成两部分,一部分比基准元素小,一部分大于等于基准元素,
 	 *此时基准元素在其排好序后的正确位置,然后再用同样的方法递归地排序划分的两部分。
 	 *	时间复杂度：O(nlog(n))
+	 *	最坏情况：序列已经排序或者反序，时间复杂度O(n^2)
+	 *	最好的情况下：序列值满足随机分布，O(nlogn);
+	 *	平均算法时间复杂度：O(n^2)
 	 */
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		int[] data = {49,38,65,97,76,13,27,0,49,78,34,12,64,5,4,62,99,98,54,56,17,18,23,34,15,35,25,53,51};
 		quickSort(data,0,data.length-1);
-		for(int i = 0; i < data.length; i++){
-			System.out.println(data[i]);
-		}
+		System.out.println(Arrays.toString(data));
 	}
 	
 	public static void quickSort(int[] data,int l,int r){
@@ -34,7 +36,7 @@ public class QuickSortDemo {
 			throw new RuntimeException("输入错误！");
 		}		
 		Random random = new Random();
-		int ranNum = random.nextInt(r - l) + l;//有一个问题，永远取不到右边界
+		int ranNum = random.nextInt(r - l + 1) + l;//有一个问题，永远取不到右边界
 		swap(data,l,ranNum);
 
 		int tmp = data[l];

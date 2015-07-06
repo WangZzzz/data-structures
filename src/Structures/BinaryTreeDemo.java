@@ -1,5 +1,6 @@
 package Structures;
 
+import java.util.LinkedList;
 import java.util.Queue;
 
 
@@ -14,6 +15,7 @@ public class BinaryTreeDemo {
 		}
 		bst.PreOrderTraverse(bst.root);
 		System.out.println("************");
+		bst.PreOrderTraverse2(bst.root);
 	/*	bst.inOrderTraverse(bst.root);
 		System.out.println("************");
 		bst.AftOrderTraverse(bst.root);*/
@@ -75,6 +77,23 @@ class BinaryTree{
 		System.out.println(node.data);
 		PreOrderTraverse(node.pLeft);
 		PreOrderTraverse(node.pRight);
+	}
+	
+	public void PreOrderTraverse2(Node node){//前序遍历--即先根遍历,通过非递归方式，借助于栈
+		LinkedList<Node> ll = new LinkedList<Node>();
+		ll.offerFirst(node);
+		while(!ll.isEmpty()){
+			Node tmpNode = ll.pollFirst();
+			System.out.println(tmpNode.data);
+			
+			if(tmpNode.pRight != null){
+				ll.offerFirst(tmpNode.pRight);
+			}
+			
+			if(tmpNode.pLeft != null){
+				ll.offerFirst(tmpNode.pLeft);
+			}
+		}
 	}
 	
 	public void inOrderTraverse(Node node){//中序遍历,通过递归方式
