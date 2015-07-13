@@ -8,7 +8,7 @@ import java.util.Arrays;
 public class AllSortDemo2 {
 
 	public static void main(String[] args){
-		String[] arr = {"1","2","3"};
+		String[] arr = {"3","32","321"};
 		AllSort(arr, 0, arr.length - 1);
 	}
 	

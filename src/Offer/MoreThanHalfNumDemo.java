@@ -29,6 +29,7 @@ public class MoreThanHalfNumDemo {
 	 *	思路：如果将数组排序，那么排序之后，位于数组中间的数字一定就是那个出现次数超过数组长度一半的数字
 	 *	快速排序的Paration每次都能返回 mid数，所以可以看返回的mid是不是数组的中间，如果是则返回数据
 	 *	事件复杂度O(n)
+	 *	由于Paration算法，每次返回一个index，在index前面的数均比index处的数小，index后面的数均比index大
 	 */
 	public static int MoreThanHalfNum(int[] nums){
 		if(nums == null || nums.length <= 0){

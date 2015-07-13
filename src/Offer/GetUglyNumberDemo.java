@@ -14,7 +14,7 @@ public class GetUglyNumberDemo {
 	}
 	
 	/**
-	 * 最直观的做法， 一个个的判断
+	 * 最直观的做法， 一个个的判断，这种做法，需要判断每个数是不是丑数，速度比较慢
 	 */
 	public static int GetUglyNumber(int index){
 		if(index <= 0){
