@@ -6,7 +6,10 @@ public class FibonacciDemo {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println(Fibonacci(9));
 		System.out.println(Fibonacci2(9));
+		System.out.println(climbStairs(9));
+		System.out.println(climbStairs2(9));
 	}
 	
 	/*
@@ -60,7 +63,7 @@ public class FibonacciDemo {
 	 * 	斐波那契数列
 	 */
 	
-	public long climbStairs(int n){
+	public static long climbStairs(int n){
 		int[] result = {1,2};
 		if(n <= 2){
 			return result[n-1];
@@ -75,6 +78,18 @@ public class FibonacciDemo {
 			f2 = f;
 		}
 		return f;
+	}
+	
+	public static long climbStairs2(int n)//递归方式,斐波那契数列，只不过出口不一样
+	{
+		if(n == 1){
+			return 1;
+		}
+		if(n == 2){
+			return 2;
+		}
+		
+		return climbStairs(n - 1) + climbStairs(n - 2);
 	}
 }
 
