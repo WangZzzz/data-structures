@@ -13,4 +13,15 @@ class LinkedList{
 			head = node;
 		}
 	}
+	
+	public void disPlay(){
+		if(head == null){
+			return;
+		}
+		ListNode current = head;
+		while(current != null){
+			System.out.println(current.val);
+			current = current.next;
+		}
+	}
 }

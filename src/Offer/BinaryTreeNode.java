@@ -10,7 +10,7 @@ public class BinaryTreeNode {
 		pLeft = null;
 		pRight = null;
 	}
-	int val;
-	BinaryTreeNode pLeft;
-	BinaryTreeNode pRight;
+	public int val;
+	public BinaryTreeNode pLeft;
+	public BinaryTreeNode pRight;
 }
